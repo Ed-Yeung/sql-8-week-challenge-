@@ -735,20 +735,7 @@ Potential levers include improving the trial onboarding experience, recommending
 4. **Annual upgrades usually occur after the trial period.** The average time to annual plan is 105 days, and 41.5% of annual-plan converters upgraded within 90 days. Analyse engagement and plan history before designing upgrade campaigns; conversion timing alone does not explain why customers upgraded.
 5. **Year-end plan mix is concentrated in Pro monthly and churn.** At 2020-12-31, 32.6% of customers were in Pro monthly and 23.6% had a churn record. Retention experiments should focus on value delivery and cancellation reasons, not on plan mix alone.
 
-## Data Limitations and Quality Notes
-
-- The supplied dataset contains subscription events, not actual viewing behaviour, acquisition spend, support contacts, payment failures, or exit-survey responses.
-- `plan_id = 4` is a churn event. It should not automatically be interpreted as the exact time account access stops, because the case states that access can continue to the end of the billing period.
-- Query B3 counts plan-change events after 2020, not distinct customers.
-- The sample journeys are only eight customers and are illustrative.
-- The payment table is a reconstructed ledger based on case rules, not evidence of actual payment transactions. Validate the output against the provided examples and explicitly document assumptions about crediting upgrades and billing boundaries.
-- This is a small, single-company teaching dataset; the results support descriptive analysis but not causal claims.
 
 ## Conclusion
 
 This case demonstrates how SQL can be used to analyse subscription lifecycle events, calculate trial conversion and churn metrics, track plan-state snapshots, measure time to annual conversion, and reconstruct payment events. The business opportunity is to combine these subscription metrics with content engagement, acquisition, and cancellation-reason data to make retention and monetisation decisions with stronger evidence.
-
-## References
-
-- [Official 8 Week SQL Challenge — Case Study #3: Foodie-Fi](https://8weeksqlchallenge.com/case-study-3/)
-- [MySQL 8.0 CTE documentation](https://dev.mysql.com/doc/refman/8.0/en/with.html)
