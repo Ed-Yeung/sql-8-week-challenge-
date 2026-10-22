@@ -1124,36 +1124,9 @@ VALUES (3, '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12');
 **Insight:** Base revenue is $138 under the stated prices, and the $1-per-extra scenario produces $142. Deducting $43.56 of runner payments leaves $94.44 before all other operating costs.  
 **Recommendation:** Build a contribution-margin view that includes ingredient, packaging, labour, and delivery costs. Treat gross revenue and revenue after runner payments as intermediate calculations—not final profit.
 
----
-
-# 6. Query Corrections and Limitations
-
-| Area | Issue in the uploaded work | Correction or limitation |
-|---|---|---|
-| Data dates | Customer order dates in the uploaded SQL are in 2020, while the case page shows 2021 | Verify and correct the source dates consistently before using weekday or elapsed-time results |
-| A5 | The original query counts records linked to cancelled deliveries | Add the successful-delivery filter when the question asks for delivered pizzas |
-| A10 | The original query counts pizza lines but labels the metric volume of orders | Report both unique order IDs and pizza rows, and validate the years used for weekday names |
-| B1 | The original query groups pickup dates rather than runner registration dates | Use `runners.registration_date` and fixed seven-day periods from 2021-01-01 |
-| B2 | Joining to every pizza line gives multiple-pizza orders extra weight | Calculate elapsed time once per unique order before averaging by runner |
-| B3 | Order-to-pickup time is described as preparation time | Label it as a proxy unless actual kitchen preparation timestamps are available |
-| B4 | Orders with multiple pizzas repeat the same delivery distance | Average distance once per delivery/order |
-| C3 | The original recursive query parses `extras` while attempting to calculate exclusions | Parse `exclusions` consistently; the provided helper table does this |
-| C4–C6 | The uploaded SQL includes the questions but does not provide completed solutions | Complete recursive-token-based solutions are included above |
-| D3 | The original approach derives ratings from speed | Customer ratings should be collected from customers; any example data must be labelled simulated |
-| D5 | The uploaded SQL lists the question but not a final profit calculation | The solution calculates pizza revenue less the stated runner payment only |
-| Ingredient schema | Toppings and customisations are stored as comma-separated strings | A normalised bridge table per topping occurrence would be more maintainable |
-
-## 7. Recommended next steps
-
-1. Correct and validate the source date values, then rerun all queries affected by date and time.
-2. Save the setup and cleaning statements in `sql/00_setup_and_cleaning.sql`, and the question solutions in clearly labelled SQL files.
-3. Add screenshots or small charts for product mix, order-to-pickup time by pizza count, delivery success rate, and ingredient usage.
-4. Add more weeks of data and actual cost/customer feedback fields before drawing stronger commercial conclusions.
+--
 
 ## Conclusion
 
 This project demonstrates how SQL can turn operational records into useful measures of product demand, order handling, delivery performance, ingredient usage, and revenue. The strongest analysis combines correct aggregation grain, consistent data cleaning, transparent assumptions, and practical recommendations. The results here are exploratory because the dataset is small and some timestamps in the supplied SQL require validation.
 
-## Reference
-
-- [Danny Ma — 8 Week SQL Challenge, Case Study #2: Pizza Runner](https://8weeksqlchallenge.com/case-study-2/)
