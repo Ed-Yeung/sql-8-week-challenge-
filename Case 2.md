@@ -1,4 +1,3 @@
-[README_Pizza_Runner (1).md](https://github.com/user-attachments/files/33799653/README_Pizza_Runner.1.md)
 # 8 Week SQL Challenge — Case Study #2: Pizza Runner
 
 **SQL dialect:** MySQL 8.0.16+  
