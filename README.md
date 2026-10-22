@@ -12,7 +12,7 @@ The table below links to the case-study write-ups currently in this repository. 
 
 | Case | Business / Dataset | Main analytical focus | Solution |
 |---|---|---|---|
-| **1** | Danny's Diner | Customer spending and visit frequency, popular menu items, loyalty-programme behaviour, and points calculations | [Read Case Study #1](Case%201.md) |
+| **1** | Danny's Diner | Customer spending and visit frequency, popular menu items, loyalty-programme behaviour, and points calculations | [Read Case Study #1]([Case%201.md](https://github.com/Ed-Yeung/sql-8-week-challenge-/blob/959ea09cabb49c3b052fdf8d5bd6ea78db4e92f8/Case%201.md)) |
 | **2** | Pizza Runner | Order and delivery operations, data cleaning, pizza and topping trends, delivery performance, and revenue scenarios | [Read Case Study #2](Case%202.md) |
 | **3** | Foodie-Fi | Subscription lifecycle, trial conversion, plan changes, churn, annual-plan upgrades, and payment-ledger analysis | [Read Case Study #3](case%203.md) |
 | **4** | Data Bank | Customer transactions, node allocations, balance calculations, and data-allocation scenarios | [Read Case Study #4](case%204.md) |
@@ -55,6 +55,3 @@ I aim to make the SQL and reasoning transparent. Where a case page uses previous
 
 The reference repository is used for learning and structural inspiration. The case write-ups in this repository are intended to communicate my own SQL approach and business interpretation rather than reproduce another author's explanation verbatim.
 
-## Repository Status
-
-This is a work in progress. I will continue to validate the queries, strengthen result interpretation, and add the remaining case studies as they are completed.
