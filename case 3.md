@@ -33,15 +33,6 @@ The case uses two source tables:
 
 The official case explains that `subscriptions.start_date` represents when the plan-state event is recorded. In particular, churn is represented by a churn plan row; the customer may retain access until the end of the billing period. This matters when interpreting a snapshot and modelling payments.
 
-## How to run the project
-
-1. Use **MySQL 8.0 or later**, because the solutions use window functions and recursive common table expressions.
-2. Run [`Foodie_Fi_Setup_MySQL.sql`](Foodie_Fi_Setup_MySQL.sql) to create the `foodie_fi` database and load the original `plans` and `subscriptions` data.
-3. Run [`Foodie_Fi_Queries_MySQL.sql`](Foodie_Fi_Queries_MySQL.sql) to execute the SQL answers, including the `payments` table challenge.
-4. Review the questions, reported outputs, and business interpretations below.
-
-**Dialect note:** the uploaded source setup originally used PostgreSQL's `SET search_path`, while the accompanying analysis uses MySQL-specific functions such as `TIMESTAMPDIFF`. The two downloadable SQL files have been prepared for MySQL 8.0+ so that setup and queries use one dialect consistently.
-
 ## Skills demonstrated
 
 - `COUNT(DISTINCT ...)`, grouping, and conditional aggregation
