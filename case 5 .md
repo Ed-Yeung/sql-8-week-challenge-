@@ -624,20 +624,7 @@ Existing and Guest customer sales account for most of the decrease, while New cu
 4. **Monitor customer behaviour, not only revenue.** Track transactions, spend per transaction, repeat purchase, customer retention, and product-level conversion alongside sales.
 5. **Use a stronger evaluation design next time.** Where possible, use a phased rollout, a comparable control group, or an A/B test. Document rollout dates and monitor leading indicators so that a sales movement can be separated more credibly from other market effects.
 
-## 9. Data and SQL Issues Found in the Supplied Files
-
-This portfolio version deliberately fixes several issues visible in the uploaded `Case 5.sql` and `case 5.docx` rather than treating every saved output as correct.
-
-- **Date conversion:** direct `ALTER ... MODIFY week_date DATE` produced dates such as `2031-08-20` for `31/8/20` in the supplied Word output. The README uses `STR_TO_DATE` with the input date format.
-- **Week numbering:** the original query uses `DATE_FORMAT(week_date, '%U')`, while this version consistently uses ISO week numbering with `WEEK(week_date, 3)`. For the baseline date, 15 June 2020, the ISO week number is 25.
-- **Transaction total:** `COUNT(*)` counts data rows; total transactions require `SUM(transactions)`.
-- **Missing-week question:** selecting weekday names does not identify missing week numbers. The observed data span is checked using year, minimum/maximum week, and count of distinct weekly dates.
-- **Yearly monthly reporting:** grouping only by month number combines the same calendar month from different years. This README includes year in monthly breakdowns to make the time comparison explicit.
-- **Retail contribution question:** the query needs `WHERE platform = 'Retail'`; otherwise it sums Retail and Shopify together.
-- **Average transaction size:** averaging row-level averages equally weights every aggregated row. The overall measure should be calculated as `SUM(sales) / SUM(transactions)`.
-- **Bonus analysis:** window totals repeated on detailed rows should not be averaged as a substitute for category-level pre/post aggregation. The before/after sums should be grouped by each dimension first.
-
-## 10. SQL Skills Demonstrated
+## 9. SQL Skills Demonstrated
 
 - Date parsing and date-derived dimensions
 - `CASE WHEN` for data standardisation and category mapping
@@ -648,14 +635,10 @@ This portfolio version deliberately fixes several issues visible in the uploaded
 - Weighted averages and denominator selection
 - Data validation, scope checks, and interpretation of limitations
 
-## 11. Conclusion
+## 10. Conclusion
 
 In the supplied extract, sales fell by **1.15%** in the four weeks and **2.14%** in the twelve weeks after the sustainable-packaging baseline date. Retail, Oceania, Asia, and unclassified customer groups explain much of the negative movement, while Shopify and New customer sales increased over the twelve-week comparison.
 
 The right business response is not to conclude immediately that sustainable packaging caused the decline. Data Mart should investigate channel, region, basket, and customer-behaviour patterns, improve customer-segment data quality, and use a more robust rollout evaluation for future sustainability changes.
 
 ---
-
-## Source and Attribution
-
-This is an independent portfolio write-up based on the SQL and Word files supplied for this project, using the [8 Week SQL Challenge — Case Study #5: Data Mart](https://8weeksqlchallenge.com/case-study-5/) as the case context. The analysis and data-quality notes are written to explain the submitted dataset and SQL decisions rather than to claim that the rollout alone caused observed sales movements.
