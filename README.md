@@ -1,4 +1,3 @@
-# sql-8-week-challenge-[README_Dannys_Diner.md](https://github.com/user-attachments/files/33798986/README_Dannys_Diner.md)
 # Case Study #1: Danny's Diner --- Customer & Loyalty Analytics
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
