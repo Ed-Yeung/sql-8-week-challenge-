@@ -623,12 +623,7 @@ These issues matter if the project is used as a professional portfolio or adapte
 - Self-joins to identify frequently co-occurring products
 - Query review: checking that SQL logic matches the business question
 
-## 7. How to Reproduce
 
-1. Load the Balanced Tree dataset into a MySQL schema named `balanced_tree`.
-2. Confirm that the schema contains the `sales` and `product_details` tables with the expected field names.
-3. Run the SQL blocks in order, or consolidate them into a reporting script once the output definitions are agreed.
-4. Before using the figures in a business report, resolve the validation points in Section 5 and rerun the queries against the source tables.
 
 ## 8. Business Takeaway
 
