@@ -1,4 +1,3 @@
-[README_Data_Bank.md](https://github.com/user-attachments/files/33801094/README_Data_Bank.md)
 # 8 Week SQL Challenge — Case Study #4: Data Bank
 
 > **Portfolio project | MySQL 8.0+ | SQL analysis and business recommendations**
